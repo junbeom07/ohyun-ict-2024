@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        padding: 10px;
+        gap: 10px;
+        border: 1px solid black;
+      }
+      label {
+        font-weight: bold;
+      }
+      input {
+        padding: 5px;
+        border: 1px solid #007bff;
+      }
+      button {
+        padding: 5px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+    </style>
+    <title>html form 실습</title>
+  </head>
+  <body>
+    <!--  이곳에 form 태그 및 input,button 태그로 폼을 구성해보세요 -->
+    <form>
+        <label for="username">아이디:</label>
+        <input id="username" type ="text" name = "id">
+        <label for="password">비밀번호:</label>
+        <input id="password" type="password">
+        <button type="submit">로그인</button>
+    </form>
+
+    <!-- 아래 코드는 복사해서 그대로 붙여넣어 보세요! -->
+    <script>
+      const form = document.querySelector("form");
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const username = document.querySelector("#username").value;
+        const password = document.querySelector("#password").value;
+        console.log("아이디:", username, "비밀번호:", password);
+      });
+    </script>
+    <a href="table.html">이동</a>
+  </body>
+</html>
+
